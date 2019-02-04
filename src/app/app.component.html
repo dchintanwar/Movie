@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center"> -->
+
+  <div class="nav navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand">My Movie Portal</a>
+
+        <button class="navbar-toggle" data-target="#collapsable" data-toggle="collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="collapsable" (onselect)="selectedValue()">
+        <ul class="nav navbar-nav">
+          <li><a>Year<span class="caret"></span></a></li>
+          <li><a>Series<span class="caret"></span></a></li>
+          <li><a>Episode<span class="caret"></span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <app-searching-movie></app-searching-movie>
+  <app-search-by-year></app-search-by-year>
+  <router-outlet></router-outlet>

@@ -1,0 +1,59 @@
+<!-- <p>{{movie.length}}</p> -->
+<div class="well">
+  <div class="panel-body">
+    <div class="container ">
+      <div class="row">
+        <form>
+          <div class="col-md-2"></div>
+          <div class="col-md-5">
+            <input [(ngModel)]="movieTitle" name="title" type="text" placeholder="search here" class="form-control">
+          </div>
+          <div class="col-md-3 box">
+            <button (click)="serchingForMovie(movieTitle)" class="form-control">Search</button>
+          </div>
+          <div class="col-md-2"></div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+          <select id='year' name='year' [(ngModel)]="year" class="form-control" onselect="getSelecteBox(this)">
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+          </select>
+        </div>
+        </div>
+      </div>
+      <!-- <table class="table table-striped table-hover">
+  <thead class="table table-striped table-bordered table-hover">
+    <tr>
+      <th>
+        title
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of movie">
+    <td (click)="findMovieDetails(t)">{{t.Title}}</td>
+  </tr>
+</tbody>
+</table> -->
+      <h3>{{details.Title}}</h3>
+      <h3>{{details.Plot}}</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3" *ngFor="let i of movie">
+            <div class="row">
+              <div class="col-md-12">
+                <span>{{i.Title}}</span>
+              </div>
+            </div>
+            <img src={{i.Poster}} alt="{{i.Poster}}" class="btn img-responsive img-thumbnail cover-full" (click)="serchingForMovie(movieTitle)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
